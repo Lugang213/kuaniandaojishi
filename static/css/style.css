@@ -1,0 +1,306 @@
+@charset "utf-8";
+html {
+	overflow-x: hidden;
+	height: 100%;
+}
+
+
+
+
+body {
+	font-family: "微软雅黑", "microsoft yahei";
+	font-size: 15px;
+	color: #666;
+	background: #a0b5e4;
+	height: 100%;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: #2a323a;
+}
+
+img {
+	max-width: 100%;
+}
+
+span {
+	color: #333
+}
+
+p {
+	line-height: 25px;
+	font-size: 15px;
+}
+
+input,
+button {
+	outline-style: none;
+	border: 0px;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+	height: 16px;
+}
+
+
+
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	
+	background-color: #FFF;
+	
+}
+
+
+
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+	background-color: #048FD4;
+	
+}
+
+::selection {
+	background: #048FD4;
+	color: #FFF;
+}
+
+
+
+
+::-moz-selection {
+	background: #048FD4;
+	color: #FFF;
+}
+
+.page {
+	text-align: center;
+	padding: 15px;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 0px 0;
+	border-radius: 4px;
+}
+
+.pagination>li {
+	display: inline;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #333;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+	margin-left: 0;
+	border-top-lebanner-radius: 4px;
+	border-bottom-lebanner-radius: 4px;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+	z-index: 2;
+	color: #23527c;
+	background-color: #eee;
+	border-color: #ddd;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+	z-index: 3;
+	color: #fff;
+	cursor: default;
+	background-color: #e70000;
+	border-color: #e70000;
+}
+
+.pagination>.disabled>span,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+	color: #999;
+	cursor: not-allowed;
+	background-color: #fff;
+	border-color: #ddd;
+}
+
+.pagination-lg>li>a,
+.pagination-lg>li>span {
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+}
+
+.pagination-lg>li:first-child>a,
+.pagination-lg>li:first-child>span {
+	border-top-lebanner-radius: 6px;
+	border-bottom-lebanner-radius: 6px;
+}
+
+.pagination-lg>li:last-child>a,
+.pagination-lg>li:last-child>span {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.pagination-sm>li>a,
+.pagination-sm>li>span {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.pagination-sm>li:first-child>a,
+.pagination-sm>li:first-child>span {
+	border-top-lebanner-radius: 3px;
+	border-bottom-lebanner-radius: 3px;
+}
+
+.pagination-sm>li:last-child>a,
+.pagination-sm>li:last-child>span {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.pager {
+	padding-left: 0;
+	margin: 20px 0;
+	text-align: center;
+	list-style: none;
+}
+
+.pager li {
+	display: inline;
+}
+
+.pager li>a,
+.pager li>span {
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+}
+
+.pager li>a:hover,
+.pager li>a:focus {
+	text-decoration: none;
+	background-color: #eee;
+}
+
+.pager .next>a,
+.pager .next>span {
+	float: right;
+}
+
+.pager .previous>a,
+.pager .previous>span {
+	float: left;
+}
+
+.pager .disabled>a,
+.pager .disabled>a:hover,
+.pager .disabled>a:focus,
+.pager .disabled>span {
+	color: #777;
+	cursor: not-allowed;
+	background-color: #fff;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.pig{
+	width: 200px;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.laoshu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: none
+}
+
+.djs,.zhufu{
+	padding: 30px;
+	margin-top: 100px;
+}
+
+.zhufu{
+	display: none;
+	/*background: rgba(0, 0, 0, .8);*/
+}
+
+.djs h3,.zhufu h3{
+	font-size: 28px;
+	text-align: center;
+	color: #fff;
+}
+
+.djs h2,.zhufu h2{
+	font-size: 60px;
+	text-align: center;
+	color: #ffd400;
+}

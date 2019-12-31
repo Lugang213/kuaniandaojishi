@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>2020跨年倒计时</title>
+		<meta http-equiv="content-language" content="zh-cn">
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">   
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="stylesheet" href="static/css/aos.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	</head>
+
+	<body>
+		<div class="djs">
+			<h3 aos="fade-left" aos-easing="ease" aos-delay="400">好朋友</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="800">一起走过了2019</h3>
+			<h3 aos="fade-left" aos-easing="ease" aos-delay="1200">感恩有你们的陪伴</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="1600">距离2020年还剩下</h3>
+			<h2 class="seconds" aos="fade-left" aos-easing="ease" aos-delay="3000">30</h2>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="2400">秒！</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="1600">0 秒后有惊喜哦！</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="1600"> &nbsp;每一秒的等待是值得的！</h3> 
+		</div>
+		<div class="zhufu"> 
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="800">   &nbsp; 在新的一年里</h3>
+			<h3 aos="fade-left" aos-easing="ease" aos-delay="1600"> &nbsp;&nbsp; 我们还是会一如既往的坚持</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="1600"> &nbsp;&nbsp; 只为那些默默陪伴着我们的用户，</h3>
+			<h3 aos="fade-left" aos-easing="ease" aos-delay="2000"> &nbsp;&nbsp; 信息交流 资源共享 合作共赢</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="2400">2020我们一起在路上</h3>
+			<h3 aos="fade-right" aos-easing="ease" aos-delay="2800">  &nbsp;&nbsp;&nbsp;&nbsp;风雨坎坷一路相伴</h3>
+		</div>
+		<div class="pig">
+			<img src="static/picture/pig.png">
+		</div>
+		<div class="laoshu">
+			<img src="static/picture/laoshu.png">
+		</div>
+	</body>
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/aos.js"></script>
+	<script>
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1200
+		});
+		var starttime = new Date("2020/01/01 0:0:0");
+		// var starttime = new Date("2019/12/31 16:22:0");
+
+		function getTime(){
+			var nowtime = new Date();
+			var time = Math.ceil((starttime - nowtime)/1000);
+			if(time <= 0){
+				clearInterval(timer);
+				$(".djs").hide();
+				$(".pig").hide();
+				$(".laoshu").show();
+				$(".zhufu").show();
+				$("body").css('background', "url(img/yh.gif)");
+			}
+			/*var time = starttime - nowtime;
+			var day = parseInt(time / 1000 / 60 / 60 / 24);
+			var hour = parseInt(time / 1000 / 60 / 60 % 24);
+			var minute = parseInt(time / 1000 / 60 % 60);
+			var seconds = parseInt(time / 1000 % 60);
+			$('.seconds').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");*/
+			$('.seconds').html(time);
+		}
+		var timer = setInterval(function() {getTime()}, 1000);
+		getTime();
+	</script>
+
+</html>
